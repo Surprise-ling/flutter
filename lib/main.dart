@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Text(
-        '你好Flutter',
+        '你好Flutter22222 \n 你居然换行了',
         textDirection: TextDirection.ltr,
       ),
     );
