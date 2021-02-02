@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/homeContent/PaddingColumnRowExpanded.dart';
 import 'homeContent/ImageClip.dart';
 import 'homeContent/ContainerText.dart';
-import 'homeContent/ListView.dart';
+import 'homeContent/ListViewText.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('App bar'),
         ),
-        body: ListView(),
+        body: PaddingColumnRowExpanded(),
       ),
       theme: ThemeData(
-        primaryColor: Colors.amberAccent,
+        primaryColor: Color.fromRGBO(2, 225, 255, 1),
       ),
     );
   }
