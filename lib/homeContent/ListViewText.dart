@@ -166,25 +166,49 @@ class ListViewText extends StatelessWidget {
   Widget build(BuildContext context) {
 
     /// list垂直列表
-    return Container(
-      height: 100,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          Image.asset('images/b.gif', fit: BoxFit.cover,),
-          Container(
-            child: Text('红红火火恍恍惚惚红红火火恍恍惚惚哈哈哈哈哈',
-              textAlign: TextAlign.center,
-              style: TextStyle(),
-            ),
-            height: 20,
+    return Column(
+      children: [
+        Container(
+          height: 100,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Container(
+                child: Text('红红火火恍恍惚惚红红火火恍恍惚惚哈哈哈哈哈',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(),
+                ),
+                height: 20,
+              ),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+            ],
           ),
-          Image.asset('images/b.gif', fit: BoxFit.cover,),
-          Image.asset('images/b.gif', fit: BoxFit.cover,),
-          Image.asset('images/b.gif', fit: BoxFit.cover,),
-          Image.asset('images/b.gif', fit: BoxFit.cover,),
-        ],
-      ),
+        ),
+        Container(
+          height: 100,
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Container(
+                child: Text('红红火火恍恍惚惚红红火火恍恍惚惚哈哈哈哈哈',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(),
+                ),
+                height: 20,
+              ),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+              Image.asset('images/b.gif', fit: BoxFit.cover,),
+            ],
+          ),
+        ),
+      ],
     );
 
     /// listView列表
