@@ -3,6 +3,9 @@ import 'package:flutter_app/homeContent/PaddingColumnRowExpanded.dart';
 import 'homeContent/ImageClip.dart';
 import 'homeContent/ContainerText.dart';
 import 'homeContent/ListViewText.dart';
+import 'homeContent/StackPositioned.dart';
+import 'homeContent/AspectRatioCard.dart' as AspectRatio;
+import 'homeContent/WrapContent.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -19,10 +22,18 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('App bar'),
         ),
-        body: PaddingColumnRowExpanded(),
+        body: WrapContent(),
       ),
       theme: ThemeData(
-        primaryColor: Color.fromRGBO(2, 225, 255, 1),
+          textButtonTheme: TextButtonThemeData(
+              style: ButtonStyle()
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: ButtonStyle()
+          ),
+          outlinedButtonTheme: OutlinedButtonThemeData(
+              style: ButtonStyle()
+          )
       ),
     );
   }
