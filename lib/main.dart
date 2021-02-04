@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/homeContent/PaddingColumnRowExpanded.dart';
-import 'homeContent/ImageClip.dart';
-import 'homeContent/ContainerText.dart';
-import 'homeContent/ListViewText.dart';
-import 'homeContent/StackPositioned.dart';
-import 'homeContent/AspectRatioCard.dart' as AspectRatio;
-import 'homeContent/WrapContent.dart';
+import 'page/BottomTab.dart' as Tabs;
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -18,18 +12,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('App bar'),
-        ),
-        body: WrapContent(),
-      ),
+      home: Tabs.Tabs(),
+      /// 主题样式
       theme: ThemeData(
           textButtonTheme: TextButtonThemeData(
               style: ButtonStyle()
           ),
           elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ButtonStyle()
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                foregroundColor: MaterialStateProperty.all(Colors.yellow)
+              )
           ),
           outlinedButtonTheme: OutlinedButtonThemeData(
               style: ButtonStyle()
