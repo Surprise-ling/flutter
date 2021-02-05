@@ -23,18 +23,30 @@ class HomeTabsState extends State {
                 MaterialPageRoute(
                   builder: (context) {
                     print(context);
-                    return HomePage(pageContext: context);
+                    return HomePage(pageContext: '这是参数111');
                   },
                 )
               );
             },
-            child: Text('跳转的其他页面')
+            child: Text('这是HomePage页面')
         ),
         ElevatedButton(
             onPressed: () {
-
+              /// 命名路由跳转,并且传入参数
+              Navigator.pushNamed(context, '/setting', arguments: {
+                "id": 2222
+              });
             },
-            child: Text('跳转的其他页面')
+            child: Text('这是Settings页面')
+        ),
+        ElevatedButton(
+            onPressed: () {
+              /// 命名路由跳转,并且传入参数
+              Navigator.pushNamed(context, '/type', arguments: {
+                "id": 3333
+              });
+            },
+            child: Text('这是TypePage页面')
         ),
       ],
     );

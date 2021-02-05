@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  String pageContext;
-  HomePage({this.pageContext});
+class TypePage extends StatefulWidget {
+  final arguments;
+  TypePage({this.arguments});
   @override
-  State<StatefulWidget> createState() => HomePageState(pageContext: this.pageContext);
+  State<StatefulWidget> createState() => TypePageState(arguments: this.arguments);
 }
 /// TabsState继承State能够改变数据
-class HomePageState extends State {
+class TypePageState extends State {
   int index = 0;
-  String pageContext;
-  HomePageState({this.pageContext}) {
-    print('${this.pageContext}');
+  final arguments;
+  TypePageState({this.arguments}) {
+    print('${this.arguments}');
   }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('${this.pageContext}'),
+        // title: Text('${this.pageContext}'),
+        title: Text('${this.arguments['id']}Bar'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +30,8 @@ class HomePageState extends State {
                 /// 直接pop跳转到上一页
                 Navigator.of(context).pop();
               },
-              child: Text('${this.pageContext}')
+              // child: Text('${this.pageContext}')
+              child: Text('${this.arguments['id']}这是按钮')
           )
         ],
       ),

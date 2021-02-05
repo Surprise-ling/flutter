@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/routes/Routes.dart';
 import 'page/BottomTab.dart' as Tabs;
 
 void main(List<String> args) {
@@ -7,12 +8,12 @@ void main(List<String> args) {
 
 // 无状态组件
 class MyApp extends StatelessWidget {
+
   // 实现继承的抽象类方法
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Tabs.Tabs(),
       /// 主题样式
       theme: ThemeData(
           textButtonTheme: TextButtonThemeData(
@@ -28,6 +29,11 @@ class MyApp extends StatelessWidget {
               style: ButtonStyle()
           )
       ),
+      /// 使用命名路由初始化进入界面
+      // home: Tabs.Tabs(),
+      /// 初始化加载的路由
+      initialRoute: '/',
+      onGenerateRoute: onGenerateRoute
     );
   }
 }
