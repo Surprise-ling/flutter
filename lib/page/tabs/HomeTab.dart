@@ -18,7 +18,7 @@ class HomeTabsState extends State {
       children: [
         ElevatedButton(
             onPressed: () {
-              /// 通过button点击事件，跳转到其他页面
+              /// 通过button点击事件，使用[of]路由跳转跳转到其他页面
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) {
@@ -32,7 +32,7 @@ class HomeTabsState extends State {
         ),
         ElevatedButton(
             onPressed: () {
-              /// 命名路由跳转,并且传入参数
+              /// 使用[pushNamed]命名路由跳转,并且传入参数
               Navigator.pushNamed(context, '/setting', arguments: {
                 "id": 2222
               });

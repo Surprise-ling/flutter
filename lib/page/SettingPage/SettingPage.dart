@@ -27,12 +27,23 @@ class SettingPageState extends State {
         children: [
           ElevatedButton(
               onPressed: () {
-                /// 直接pop跳转到上一页
-                Navigator.of(context).pop();
+                if (this.arguments['id'] == 95271) {
+                  // Navigator.of(context).pushNamedAndRemoveUntil(
+                  //     '/',
+                  //     (route) => false,
+                  // );
+                  print('object');
+                  /// popUntil必须保留对应的栈，才能返回到指定名称的页面
+                  /// 会将之前的所有栈清除
+                  Navigator.of(context).popUntil(ModalRoute.withName('/register'));
+                } else {
+                  /// 直接pop跳转到上一页
+                  Navigator.of(context).pop();
+                }
               },
               // child: Text('${this.pageContext}')
               child: Text('${this.arguments['id']}这是按钮')
-          )
+          ),
         ],
       ),
       // bottomNavigationBar: BottomNavigationBar(

@@ -14,17 +14,22 @@ import 'package:flutter_app/page/tabs/TypeTab.dart';
 
 /// 定义tabs有状态组件
 class Tabs extends StatefulWidget {
+  int index;
+  Tabs({this.index = 0});
   @override
-  State<StatefulWidget> createState() => TabsState();
+  State<StatefulWidget> createState() => TabsState(this.index);
 }
 /// TabsState继承State能够改变数据
 class TabsState extends State {
-  int index = 0;
+  int index;
   List list = [
     HomeTabs(),
     SettingTabs(),
     TypeTabs(),
   ];
+  TabsState(this.index) {
+    print(this.index);
+  }
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
