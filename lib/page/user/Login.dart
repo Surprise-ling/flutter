@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_app/component/customDialog.dart';
 
 class Login extends StatefulWidget {
   final Map arguments;
@@ -74,6 +75,12 @@ class LoginQ extends State {
             /// toast提示
               onPressed: _toast,
               child: Text('toast')
+          ),
+          SizedBox(height: 10,),
+          ElevatedButton(
+            /// toast提示
+              onPressed: _myDialog,
+              child: Text('自定义dialog')
           ),
           SizedBox(height: 10,),
         ],
@@ -190,14 +197,25 @@ class LoginQ extends State {
   }
 
   _toast() {
-    Fluttertoast.showToast(
-        msg: "This is Center Short Toast",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
-        fontSize: 16.0
+    // Fluttertoast.showToast(
+    //     msg: "This is Center Short Toast",
+    //     toastLength: Toast.LENGTH_SHORT,
+    //     gravity: ToastGravity.CENTER,
+    //     timeInSecForIosWeb: 1,
+    //     backgroundColor: Colors.red,
+    //     textColor: Colors.white,
+    //     fontSize: 16.0
+    // );
+  }
+
+  /// 使用自定义dialog
+  _myDialog() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        /// 使用自定义dialog
+        return CustomDialog('这是标题', '这是内容');
+      }
     );
   }
 }
