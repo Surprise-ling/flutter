@@ -5,6 +5,7 @@ import 'package:flutter_app/page/TypePage/TypePage.dart';
 import 'package:flutter_app/page/user/Login.dart';
 import 'package:flutter_app/page/user/RegisterFirst.dart';
 import 'package:flutter_app/page/user/RegisterSecond.dart';
+import 'package:flutter_app/page/user/tabsController.dart';
 
 /// 定义路由列表，必须为[routes]
 final routes = {
@@ -14,6 +15,7 @@ final routes = {
   '/login': (context, { arguments }) => Login(arguments: arguments),
   '/register': (context, { arguments }) => RegisterFirst(arguments: arguments),
   '/registerTwo': (context, { arguments }) => RegisterSecond(arguments: arguments),
+  '/tabsController': (context, { arguments }) => TabsController(arguments: arguments),
 };
 /// 路由跳转事件
 Function onGenerateRoute = (RouteSettings settings) {

@@ -11,7 +11,7 @@ class AspectRatioCard extends StatelessWidget {
           color: Colors.black
         )
       ),
-      /// aspectRatio 调整子元素，根据父元素设置宽高比(在平铺方面使用)
+      /// aspectRatio 调整子元素，根据父元素设置宽高比(在平铺方面使用),设置组件宽高比
       child: AspectRatio(
         aspectRatio: 2.0/12.0,
         child: Container(
