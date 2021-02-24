@@ -32,7 +32,7 @@ class HomePageState extends State {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text('${this.pageContext}'),
+        title: TextField(),
       ),
       body: Padding(
         padding: EdgeInsets.all(10),

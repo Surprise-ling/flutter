@@ -30,8 +30,8 @@ class TypeTabsState extends State {
                       /// 指示器长度
                       indicatorSize: TabBarIndicatorSize.label,
                       tabs: [
-                        Tab(text: '热门'),
-                        Tab(text: '热门1'),
+                        Text('123'),
+                        Tab(text: '热门122'),
                         Tab(text: '热门1'),
                         Tab(text: '热门1'),
                         Tab(text: '热门1'),
